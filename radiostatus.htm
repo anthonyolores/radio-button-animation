@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<style>
+body{
+	background: #2c2c2c;
+	color: #eee;
+	padding-top:50px;
+}
+.credit-box-cont > .col-md-3 {
+	padding:0px;
+}
+/* Hide the browser's default radio button */
+/* The container */
+.credit-radio-label {
+    position:relative;
+	padding:0px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.credit-text {
+	position:relative;
+	top:10px;
+	font-weight:normal;
+	font-size:0.9em !important;
+}
+.credit-text > label{
+	position:relative;
+	font-weight:normal;
+	cursor:pointer;
+}
+/* Hide the browser's default radio button */
+.credit-radio-label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+/* Create a custom radio button */
+.credit-radio-label .checkmark {
+    position: absolute;
+	transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    height: 24px;
+    width: 24px;
+    background-color: #eee;
+    border-radius: 50%;
+	-webkit-transition: all ease .5s;
+	transition: all ease .5s;
+}
+/* On mouse-over, add a grey background color */
+.credit-radio-label:hover input ~ .checkmark {
+    background-color: #ccc;
+	-webkit-transition: all ease .3s;
+	transition: all ease .3s;
+}
+/* When the radio button is checked, add a blue background */
+.credit-radio-label input:checked ~ .checkmark {
+    background-color: #0f93d5;
+	-webkit-transition: all ease .3s;
+	transition: all ease .3s;
+}
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.credit-radio-label .checkmark:after {
+    content: "";
+    position: absolute;
+    display: block;
+	-webkit-transition: all ease .3s;
+	transition: all ease .3s;
+}
+/* Show the indicator (dot/circle) when checked */
+/*.credit-radio-label:hover .checkmark:after,
+.credit-radio-label input:checked ~ .checkmark:after {
+    display: block;
+}*/
+
+/* Style the indicator (dot/circle) */
+.credit-radio-label:hover .checkmark:after,
+.credit-radio-label input:checked ~ .checkmark:after {
+ 	top: 7px;
+	left: 7px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: #2c2c2c;
+}
+.credit-radio-label .checkmark:after {
+ 	top: 2px;
+	left: 2px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: #2c2c2c;
+}
+
+</style>
+  
+<div class="container">
+			<div class="credit-box-cont">
+				<div class="col-md-3 col-xs-3 col-md-3 text-center">
+					<label class="credit-radio-label">
+						<input value="1" class="credit-radio" type="radio" checked="checked" id="poor" name="radio">
+						<span class="checkmark"></span>
+					</label>
+					<div class="row">
+						<div class="credit-text">
+							<label for="poor">Poor</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-xs-3 col-md-3 text-center">
+					<label class="credit-radio-label">
+						<input value="2" class="credit-radio" type="radio" id="average" name="radio">
+						<span class="checkmark"></span>
+					</label>
+					<div class="row">
+						<div class="credit-text">
+							<label for="average">Average</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-xs-3 col-md-3 text-center">
+					<label class="credit-radio-label">
+						<input value="3" class="credit-radio" type="radio" id="good" name="radio">
+						<span class="checkmark"></span>
+					</label>
+					<div class="row">
+						<div class="credit-text">
+							<label for="good">Good</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-xs-3 col-md-3 text-center">
+					<div class="row">
+						<label class="credit-radio-label">
+							<input value="4" class="credit-radio" type="radio" id="excellent" name="radio">
+							<span class="checkmark"></span>
+						</label>
+					</div>
+					<div class="row">
+						<div class="credit-text">
+							<label for="excellent">Excellent</label>
+						</div>
+					</div>
+				</div>
+			</div>     
+</div>
+
+</body>
+</html>
